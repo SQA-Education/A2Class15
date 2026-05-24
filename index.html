@@ -63,8 +63,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
 .hidden{display:none}
 .nav-buttons{display:flex;justify-content:space-between;margin-top:20px;gap:10px}
 @media(max-width:600px){.scores{grid-template-columns:repeat(3,1fr)}.nav-buttons{flex-direction:column}}
-
-/* Role Play Styles */
 .scenario-option{padding:15px;border:2px solid #e0e0e0;border-radius:12px;cursor:pointer;transition:all .2s;margin-bottom:10px}
 .scenario-option:hover{border-color:#2E7D32;background:#f1f8e9}
 .scenario-option.selected{border-color:#2E7D32;background:#e8f5e9}
@@ -93,8 +91,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
         <h1>📚 Session 15: Practice Final Review <span class="badge">REVIEW</span></h1>
         <p>Week 8 • Practical Skills II Complete Review</p>
     </div>
-
-    <!-- Start Section -->
     <div class="section active" id="start">
         <div class="card">
             <h2>Welcome to Your Final Review!</h2>
@@ -122,8 +118,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
             <button class="btn" onclick="startQuiz()">Start Final Review →</button>
         </div>
     </div>
-
-    <!-- Section 1: Reading -->
     <div class="section" id="s1">
         <div class="card">
             <div class="progress-text"><span>Section 1 of 5</span><span>20%</span></div>
@@ -143,8 +137,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
         </div>
     </div>
-
-    <!-- Section 2: Vocabulary -->
     <div class="section" id="s2">
         <div class="card">
             <div class="progress-text"><span>Section 2 of 5</span><span>40%</span></div>
@@ -158,8 +150,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
         </div>
     </div>
-
-    <!-- Section 3: Writing -->
     <div class="section" id="s3">
         <div class="card">
             <div class="progress-text"><span>Section 3 of 5</span><span>60%</span></div>
@@ -185,15 +175,11 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
         </div>
     </div>
-
-    <!-- Section 4: Speaking Role Play -->
     <div class="section" id="s4">
         <div class="card">
             <div class="progress-text"><span>Section 4 of 5</span><span>80%</span></div>
             <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
             <h2>🎤 4. Speaking - Role Play</h2>
-            
-            <!-- Scenario Selection -->
             <div id="scenarioSelection">
                 <div class="prompt-box">
                     <h4>Choose a role-play scenario:</h4>
@@ -212,8 +198,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
                     <p style="color:#666;font-size:14px;margin-top:5px">You are talking to a friend about a vacation you took.</p>
                 </div>
             </div>
-
-            <!-- Role Play Chat -->
             <div id="rolePlayArea" style="display:none">
                 <div style="background:#e8f5e9;padding:10px 15px;border-radius:8px;margin-bottom:15px;text-align:center">
                     <strong id="scenarioTitle" style="color:#2E7D32"></strong>
@@ -225,7 +209,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
                     <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5-3c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/></svg>
                 </button>
             </div>
-
             <div class="feedback hidden" id="sFeedback"></div>
             <div class="nav-buttons">
                 <button class="btn btn-secondary" onclick="goTo('s3')">← Back</button>
@@ -233,8 +216,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
         </div>
     </div>
-
-    <!-- Section 5: Grammar -->
     <div class="section" id="s5">
         <div class="card">
             <div class="progress-text"><span>Section 5 of 5</span><span>100%</span></div>
@@ -247,8 +228,6 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
         </div>
     </div>
-
-    <!-- Results Section -->
     <div class="section" id="results">
         <div class="score-card">
             <p style="opacity:.8">🎉 Congratulations! A2 Course Complete! 🎉</p>
@@ -280,20 +259,15 @@ textarea:focus{outline:none;border-color:#2E7D32}
         </div>
     </div>
 </div>
-
 <script>
-const SESSION='A2 Session 15 (Practice Final)';
+const SESSION='15';
 let studentName='',studentClass='',scores={l:0,v:0,w:0,s:0,g:0},writingText='';
 let readingAnswers=[],grammarAnswers=[];
-
-// Role Play Variables
 let selectedScenario=0;
 let currentExchange=0;
 let transcript=[];
 let isRecording=false;
 let recognition=null;
-
-// Pre-scripted conversations
 const scenarios={
     1:{
         title:'🏠 Tenant and Landlord',
@@ -329,8 +303,6 @@ const scenarios={
         ]
     }
 };
-
-// Reading Questions
 const readingQBank=[
     {q:"When did Maria move to the United States?",opts:["Last year","Two years ago","Three years ago"],correct:1},
     {q:"What time does Maria usually start work?",opts:["6 AM","7 AM","8 AM"],correct:1},
@@ -338,8 +310,6 @@ const readingQBank=[
     {q:"How did Maria ask for help?",opts:["She sent an email","She called and asked politely","She fixed it herself"],correct:1},
     {q:"What does Maria want to become?",opts:["A doctor","A nurse","A teacher"],correct:1}
 ];
-
-// Grammar Questions
 const grammarQBank=[
     {q:"She _____ to work every day.",opts:["go","goes","going"],correct:1},
     {q:"I am _____ English right now.",opts:["study","studies","studying"],correct:2},
@@ -352,8 +322,6 @@ const grammarQBank=[
     {q:"We _____ TV every evening.",opts:["watch","watches","watching"],correct:0},
     {q:"I _____ to New York last month.",opts:["go","went","going"],correct:1}
 ];
-
-// Vocabulary Questions
 const vocabMatchBank=[
     {term:"freezing",def:"The weather is very cold. It's"},
     {term:"uncle",def:"My mother's brother is my"},
@@ -365,7 +333,6 @@ const vocabMatchBank=[
     {term:"headache",def:"I have a My head hurts."}
 ];
 let vocabPairs=[],vocabSelectedTerm=null,vocabMatched=0,vocabTotal=6;
-
 function shuffle(arr){
     for(let i=arr.length-1;i>0;i--){
         const j=Math.floor(Math.random()*(i+1));
@@ -373,9 +340,7 @@ function shuffle(arr){
     }
     return arr;
 }
-
 function initQuestions(){
-    // Reading
     const rQs=shuffle([...readingQBank]).slice(0,3);
     let rHTML='';
     rQs.forEach((q,i)=>{
@@ -389,8 +354,6 @@ function initQuestions(){
         rHTML+='</div>';
     });
     document.getElementById('readingQuestions').innerHTML=rHTML;
-
-    // Vocabulary
     vocabPairs=shuffle([...vocabMatchBank]).slice(0,6);
     vocabMatched=0;vocabTotal=6;vocabSelectedTerm=null;
     const shuffledDefs=shuffle(vocabPairs.map((p,i)=>({def:p.def,idx:i})));
@@ -406,8 +369,6 @@ function initQuestions(){
     vHTML+='</div></div>';
     vHTML+='<div id="matchFeedback" style="text-align:center;margin-top:15px;font-weight:600"></div>';
     document.getElementById('vocabQuestions').innerHTML=vHTML;
-
-    // Grammar
     const gQs=shuffle([...grammarQBank]).slice(0,8);
     let gHTML='';
     gQs.forEach((q,i)=>{
@@ -422,32 +383,28 @@ function initQuestions(){
     });
     document.getElementById('grammarQuestions').innerHTML=gHTML;
 }
-
 function startQuiz(){
     studentName=document.getElementById('studentName').value.trim();
     studentClass=document.getElementById('studentClass').value;
     if(!studentName){alert('Please enter your name');return;}
     if(!studentClass){alert('Please select your class');return;}
+    setTeacher(document.getElementById('studentClass'));
     initQuestions();
     goTo('s1');
 }
-
 function goTo(id){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
     window.scrollTo(0,0);
 }
-
 function goBack0(){
     document.getElementById('s1').classList.remove('active');
     document.getElementById('start').classList.add('active');
 }
-
 function sel(el){
     el.parentElement.querySelectorAll('.option').forEach(o=>o.classList.remove('selected'));
     el.classList.add('selected');
 }
-
 function checkS1(){
     let correct=0;
     document.querySelectorAll('#readingQuestions .question').forEach((q,i)=>{
@@ -457,7 +414,6 @@ function checkS1(){
     scores.l=correct;
     goTo('s2');
 }
-
 function selectTerm(el){
     if(el.classList.contains('matched'))return;
     document.querySelectorAll('.match-term').forEach(t=>t.classList.remove('selected'));
@@ -490,17 +446,13 @@ function checkS2(){
     scores.v=vocabMatched;
     goTo('s3');
 }
-
 function updateWC(){
     document.getElementById('wc').textContent=document.getElementById('writing').value.trim().split(/\s+/).filter(w=>w).length;
 }
-
 function checkWriting(){
     writingText=document.getElementById('writing').value;
     const t=writingText.toLowerCase();
     const wc=t.trim().split(/\s+/).filter(w=>w).length;
-    
-    // Always allow submission — empty writing scores 0 but doesn't block
     if(wc===0){
         scores.w=0;
         let fbEmpty='<h4>Feedback</h4><p style="color:#888">Nothing written yet. Try writing about your daily routine next time!</p><p><strong>Score: 0/20</strong></p>';
@@ -510,32 +462,22 @@ function checkWriting(){
         document.getElementById('wNext').classList.remove('hidden');
         return;
     }
-    
     let errorCount=0;
-    // Real subject-verb errors (3rd person singular wrong on "I")
     if(/\bi goes\b|\bi works\b|\bi lives\b|\bi wakes\b|\bi eats\b/i.test(t)) errorCount++;
-    // Real 3rd person singular missing on he/she
     if(/\b(he|she) (go|work|wake|eat|live|study|play|read) /i.test(t)) errorCount++;
-    
-    // Generous A2 daily routine keyword detection
     const hasRoutine=/\b(wake|wakes|morning|breakfast|lunch|dinner|work|works|school|home|evening|night|sleep|sleeps|shower|showers|brush|brushes|cook|cooks|eat|eats|drink|drinks|read|reads|exercise|exercises|study|studies|watch|watches|play|plays|run|runs|walk|walks|take|takes|get|gets|leave|leaves|arrive|arrives|return|returns)\b/i.test(t);
     const hasFrequency=/\b(usually|always|every day|every morning|every night|sometimes|often|never|on (monday|tuesday|wednesday|thursday|friday|saturday|sunday)s?|on weekends?|in the (morning|afternoon|evening|night))\b/i.test(t);
     const hasTime=/\b\d{1,2}\s*(am|pm|a\.m|p\.m|o'?clock)?\b|\b(morning|afternoon|evening|night|noon|midnight|early|late)\b/i.test(t);
     const hasConnector=/\b(then|after|before|first|next|finally|and then|in the morning|at night)\b/i.test(t);
-    
-    // Calculate score — weights now sum to 22, capped at 20 → reachable
     let score=0;
     score+=(hasRoutine?7:0);
     score+=(hasFrequency?5:0);
     score+=(hasTime?4:0);
     score+=(hasConnector?2:0);
-    // Length bonus: 4 pts at 50+, scales down — model answers easily reach this
     score+=(wc>=50?4:wc>=30?3:wc>=20?2:1);
-    score-=(errorCount*2); // Lighter error penalty
+    score-=(errorCount*2);
     score=Math.max(0,Math.min(20,Math.round(score)));
-    
     scores.w=score;
-    
     let feedbackHTML='<h4>Feedback</h4>';
     feedbackHTML+='<p>Word count: '+wc+'</p>';
     feedbackHTML+='<ul style="margin:8px 0;padding-left:20px;font-size:14px">';
@@ -548,83 +490,68 @@ function checkWriting(){
         feedbackHTML+='<p style="color:#ef4444"><strong>Grammar errors found: '+errorCount+'</strong></p>';
     }
     feedbackHTML+='<p><strong>Score: '+scores.w+'/20</strong></p>';
-    
     document.getElementById('wFeedback').innerHTML=feedbackHTML;
     document.getElementById('wFeedback').classList.remove('hidden');
     document.getElementById('wBtn').classList.add('hidden');
     document.getElementById('wNext').classList.remove('hidden');
 }
-
-// ============ ROLE PLAY FUNCTIONS ============
-
 function selectScenario(num){
     selectedScenario=num;
     const scenario=scenarios[num];
-    
     document.querySelectorAll('.scenario-option').forEach((el,i)=>{
         el.classList.toggle('selected',i===num-1);
     });
-    
     document.getElementById('scenarioSelection').style.display='none';
     document.getElementById('rolePlayArea').style.display='block';
     document.getElementById('scenarioTitle').textContent=scenario.title+' — You are the '+scenario.userRole;
-    
     transcript=[];
     currentExchange=0;
     document.getElementById('chatContainer').innerHTML='';
     updateExchangeCounter();
-    
-    // Start first AI message after short delay
     setTimeout(()=>{
         playAIMessage();
     },500);
 }
-
 function updateExchangeCounter(){
     const total=scenarios[selectedScenario].exchanges.length;
     document.getElementById('exchangeCounter').textContent='Exchange '+(currentExchange+1)+' of '+total;
 }
-
 function addMessage(sender,text){
     const container=document.getElementById('chatContainer');
     const scenario=scenarios[selectedScenario];
     const label=sender==='ai'?scenario.aiRole:scenario.userRole;
     const bubbleClass=sender==='ai'?'chat-ai':'chat-user';
-    
     const row=document.createElement('div');
     row.className='chat-row '+sender;
     row.innerHTML='<div><div class="chat-label">'+label+'</div><div class="chat-bubble '+bubbleClass+'">'+text+'</div></div>';
     container.appendChild(row);
     container.scrollTop=container.scrollHeight;
 }
-
 function speakText(text,callback){
+    var fired=false;
+    function done(){if(fired)return;fired=true;if(callback)callback();}
     if('speechSynthesis' in window){
-        window.speechSynthesis.cancel();
-        const utterance=new SpeechSynthesisUtterance(text);
+        try{window.speechSynthesis.cancel();}catch(e){}
+        var utterance=new SpeechSynthesisUtterance(text);
         utterance.rate=0.9;
         utterance.lang='en-US';
-        utterance.onend=function(){
-            if(callback)callback();
-        };
-        window.speechSynthesis.speak(utterance);
+        utterance.onend=function(){done();};
+        utterance.onerror=function(){done();};
+        var estMs=Math.max(4000,Math.min(20000,(text.length/14)*1000+3000));
+        setTimeout(done,estMs);
+        try{window.speechSynthesis.speak(utterance);}catch(e){setTimeout(done,300);}
     }else{
-        if(callback)setTimeout(callback,1500);
+        setTimeout(done,1500);
     }
 }
-
 function playAIMessage(){
     const scenario=scenarios[selectedScenario];
     const exchange=scenario.exchanges[currentExchange];
-    
     document.getElementById('micBtn').disabled=true;
     document.getElementById('statusText').textContent='Listen...';
-    
     addMessage('ai',exchange.ai);
     transcript.push(scenario.aiRole+': '+exchange.ai);
-    
     speakText(exchange.ai,function(){
-        // Check if this is the last exchange
         if(currentExchange>=scenario.exchanges.length-1){
             endConversation();
         }else{
@@ -633,7 +560,6 @@ function playAIMessage(){
         }
     });
 }
-
 function toggleMic(){
     if(isRecording){
         stopRecording();
@@ -641,34 +567,28 @@ function toggleMic(){
         startRecording();
     }
 }
-
 function startRecording(){
     const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
     if(!SR){
-        // Fallback for browsers without speech recognition
         const response=prompt('Speech recognition not available. Type your response:');
         if(response){
             handleUserResponse(response);
         }
         return;
     }
-    
     recognition=new SR();
     recognition.continuous=false;
     recognition.interimResults=false;
     recognition.lang='en-US';
-    
     recognition.onstart=function(){
         isRecording=true;
         document.getElementById('micBtn').classList.add('recording');
         document.getElementById('statusText').textContent='Listening... Click to stop';
     };
-    
     recognition.onresult=function(event){
         const text=event.results[0][0].transcript;
         handleUserResponse(text);
     };
-    
     recognition.onerror=function(event){
         console.log('Speech error:',event.error);
         stopRecording();
@@ -676,20 +596,17 @@ function startRecording(){
             document.getElementById('statusText').textContent='No speech detected. Try again.';
         }
     };
-    
     recognition.onend=function(){
         if(isRecording){
             stopRecording();
         }
     };
-    
     try{
         recognition.start();
     }catch(e){
         console.log('Recognition error:',e);
     }
 }
-
 function stopRecording(){
     isRecording=false;
     document.getElementById('micBtn').classList.remove('recording');
@@ -697,50 +614,33 @@ function stopRecording(){
         try{recognition.stop();}catch(e){}
     }
 }
-
 function handleUserResponse(userText){
     stopRecording();
-    
     const scenario=scenarios[selectedScenario];
-    
-    // Add user message
     addMessage('user',userText);
     transcript.push(scenario.userRole+': '+userText);
-    
-    // Move to next exchange
     currentExchange++;
     updateExchangeCounter();
-    
-    // Play next AI message after short delay
     document.getElementById('micBtn').disabled=true;
     document.getElementById('statusText').textContent='';
-    
     setTimeout(()=>{
         playAIMessage();
     },1000);
 }
-
 function endConversation(){
     document.getElementById('micBtn').disabled=true;
     document.getElementById('statusText').textContent='✓ Conversation complete!';
-    
-    // Each scenario has 4 AI messages but only 3 require a student response
-    // (the 4th AI message is the closer). Score generously: full credit for
-    // completing all student turns, partial credit otherwise.
     const scenario=scenarios[selectedScenario];
-    const studentTurns=Math.max(1,scenario.exchanges.length-1); // 3 turns
+    const studentTurns=Math.max(1,scenario.exchanges.length-1);
     const completed=Math.min(currentExchange,studentTurns);
     scores.s=Math.round((completed/studentTurns)*20);
-    
     document.getElementById('sFeedback').innerHTML='<h4>Role Play Complete!</h4><p>Scenario: '+scenario.title+'</p><p>Responses given: '+completed+' of '+studentTurns+'</p><p><strong>Score: '+scores.s+'/20</strong></p>';
     document.getElementById('sFeedback').classList.remove('hidden');
     document.getElementById('sBtn').style.display='block';
 }
-
 function finishSpeaking(){
     goTo('s5');
 }
-
 function submitFinal(){
     let correct=0;
     document.querySelectorAll('#grammarQuestions .question').forEach((q,i)=>{
@@ -757,10 +657,8 @@ function submitFinal(){
         }
     });
     scores.g=correct;
-    
     const total=scores.l+scores.v+scores.w+scores.s+scores.g;
     const pct=Math.round(total/57*100);
-    
     document.getElementById('finalPct').textContent=pct+'%';
     document.getElementById('studentDisplay').textContent=studentName+' ['+studentClass+']';
     document.getElementById('scL').textContent=scores.l+'/3';
@@ -768,7 +666,6 @@ function submitFinal(){
     document.getElementById('scW').textContent=scores.w+'/20';
     document.getElementById('scS').textContent=scores.s+'/20';
     document.getElementById('scG').textContent=scores.g+'/8';
-    
     let cefrLevel='A2';
     let cefrMsg='';
     if(pct>=85){
@@ -786,50 +683,49 @@ function submitFinal(){
     }
     document.getElementById('cefrLevel').textContent=cefrLevel;
     document.getElementById('cefrMessage').textContent=cefrMsg;
-    
     goTo('results');
 }
-
 function setTeacher(sel){var opt=sel.options[sel.selectedIndex];var th=document.getElementById('teacherName');if(th)th.value=opt?(opt.getAttribute('data-teacher')||''):'';}
-
+let submitted=false;
 function submitToTeacher(){
+    if(submitted)return;submitted=true;
+    const btn=document.getElementById('submitBtn');
+    const warnEl=document.getElementById('notSubmittedWarning');
+    const successEl=document.getElementById('submittedSuccess');
+    if(btn){btn.disabled=true;btn.textContent='Submitting...';}
     const pct=Math.round((scores.l+scores.v+scores.w+scores.s+scores.g)/57*100);
     const transcriptText=transcript.length>0?transcript.join('\n'):'[No role play completed]';
-    const classLabel='A2 Session 15 - '+studentClass;
-
-    const form=document.createElement('form');
-    form.method='POST';
-    form.action='https://docs.google.com/forms/d/e/1FAIpQLScxGsRNBL0knEUNZNnTX3FLDx22Lxgc-J7uM4yvi-yuK-hHAQ/formResponse';
-    form.target='hidden_iframe';
-    form.style.display='none';
-
-    // Same field mapping as A2 Sessions 11, 12, 13, 14, 16 (Final Test)
-    const fields={
-        'entry.1066076854':studentName,
-        'entry.351193357':classLabel,
-        'entry.2003686479':scores.l+'/3',
-        'entry.985159923':scores.v+'/6',
-        'entry.2097271288':scores.w+'/20',
-        'entry.1129535850':scores.s+'/20',
-        'entry.1504049138':scores.g+'/8',
-        'entry.1853593873':pct+'%',
-        'entry.388860548':writingText,
-        'entry.880068307':transcriptText,
-        'entry.514421492':'A2',
-        'entry.1451249480':document.getElementById('teacherName').value
-    };
-    Object.keys(fields).forEach(key=>{
-        const input=document.createElement('input');
-        input.type='hidden';input.name=key;input.value=fields[key];
-        form.appendChild(input);
-    });
-    let iframe=document.getElementById('hidden_iframe');
-    if(!iframe){iframe=document.createElement('iframe');iframe.name='hidden_iframe';iframe.id='hidden_iframe';iframe.style.display='none';document.body.appendChild(iframe);}
-    document.body.appendChild(form);form.submit();form.remove();
-
-    document.getElementById('notSubmittedWarning').style.display='none';
-    document.getElementById('submittedSuccess').style.display='block';
-    document.getElementById('submitBtn').style.display='none';
+    const clsVal=document.getElementById('studentClass')?document.getElementById('studentClass').value:'';
+    const formData=new FormData();
+    formData.append('entry.1066076854',studentName);
+    // entry.351193357 = Session, entry.514421492 = Class (matches A2 Class 10 mapping)
+    formData.append('entry.351193357',SESSION);
+    formData.append('entry.2003686479',scores.l+'/3');
+    formData.append('entry.985159923',scores.v+'/6');
+    formData.append('entry.2097271288',scores.w+'/20');
+    formData.append('entry.1129535850',scores.s+'/20');
+    formData.append('entry.1504049138',scores.g+'/8');
+    formData.append('entry.1853593873',pct+'%');
+    formData.append('entry.388860548',writingText||'');
+    formData.append('entry.880068307',transcriptText);
+    formData.append('entry.514421492',clsVal);
+    formData.append('entry.1451249480',document.getElementById('teacherName').value);
+    function showSuccess(){
+        if(btn){btn.textContent='Submitted ✓';btn.style.background='#22c55e';btn.disabled=true;btn.style.display='none';}
+        if(warnEl)warnEl.style.display='none';
+        if(successEl)successEl.style.display='block';
+    }
+    function showFailure(){
+        submitted=false;
+        if(btn){btn.disabled=false;btn.textContent='Failed - Tap to Retry';btn.style.background='#ef4444';}
+        if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠️ Submission failed. Check your internet and tap Retry.';}
+    }
+    let done=false;
+    const timeoutId=setTimeout(function(){if(!done){done=true;showSuccess();}},6000);
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLScxGsRNBL0knEUNZNnTX3FLDx22Lxgc-J7uM4yvi-yuK-hHAQ/formResponse',
+          {method:'POST',mode:'no-cors',body:formData})
+        .then(function(){if(done)return;done=true;clearTimeout(timeoutId);showSuccess();})
+        .catch(function(){if(done)return;done=true;clearTimeout(timeoutId);showFailure();});
 }
 </script>
 </body>
