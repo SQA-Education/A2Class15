@@ -88,16 +88,16 @@ textarea:focus{outline:none;border-color:#2E7D32}
 <div class="container">
     <div class="header">
         <div class="level-badge">CEFR Level A2 - Elementary</div>
-        <h1>📚 Session 15: Practice Final Review <span class="badge">REVIEW</span></h1>
-        <p>Week 8 • Practical Skills II Complete Review</p>
+        <h1>&#128218; Session 15: Practice Final Review <span class="badge">REVIEW</span></h1>
+        <p>Week 8 &bull; Practical Skills II Complete Review</p>
     </div>
     <div class="section active" id="start">
         <div class="card">
             <h2>Welcome to Your Final Review!</h2>
             <p style="color:#666;margin-bottom:20px">This assessment covers everything you learned in A2:</p>
             <ul style="color:#666;margin-bottom:20px;padding-left:20px">
-                <li>Present Simple & Present Continuous</li>
-                <li>Past Simple (regular & irregular verbs)</li>
+                <li>Present Simple &amp; Present Continuous</li>
+                <li>Past Simple (regular &amp; irregular verbs)</li>
                 <li>Modal Verbs (can, could, should)</li>
                 <li>Vocabulary: Weather, Work, Family, Health, Housing, Travel</li>
             </ul>
@@ -115,14 +115,14 @@ textarea:focus{outline:none;border-color:#2E7D32}
 <option value="3101" data-teacher="Hector Amaya">3101 - Tue/Thu 8:30 PM (Hector)</option>
 </optgroup>
 </select>
-            <button class="btn" onclick="startQuiz()">Start Final Review →</button>
+            <button class="btn" onclick="startQuiz()">Start Final Review &rarr;</button>
         </div>
     </div>
     <div class="section" id="s1">
         <div class="card">
             <div class="progress-text"><span>Section 1 of 5</span><span>20%</span></div>
             <div class="progress"><div class="progress-bar" style="width:20%"></div></div>
-            <h2>📖 1. Reading Comprehension</h2>
+            <h2>&#128214; 1. Reading Comprehension</h2>
             <div class="reading-box">
                 <p><strong>Maria's Life in America</strong></p>
                 <p>Maria moved to the United States two years ago from Mexico. At first, everything was difficult. She didn't speak English well.</p>
@@ -132,8 +132,8 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
             <div id="readingQuestions"></div>
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="goBack0()">← Back</button>
-                <button class="btn" onclick="checkS1()">Continue →</button>
+                <button class="btn btn-secondary" onclick="goBack0()">&larr; Back</button>
+                <button class="btn" onclick="checkS1()">Continue &rarr;</button>
             </div>
         </div>
     </div>
@@ -141,12 +141,12 @@ textarea:focus{outline:none;border-color:#2E7D32}
         <div class="card">
             <div class="progress-text"><span>Section 2 of 5</span><span>40%</span></div>
             <div class="progress"><div class="progress-bar" style="width:40%"></div></div>
-            <h2>📝 2. Vocabulary Matching</h2>
+            <h2>&#128221; 2. Vocabulary Matching</h2>
             <div class="prompt-box"><h4>Match each word with its correct definition</h4><p style="color:#666">Tap a word on the left, then tap its matching definition on the right.</p></div>
             <div id="vocabQuestions"></div>
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="goTo('s1')">← Back</button>
-                <button class="btn" onclick="checkS2()">Continue →</button>
+                <button class="btn btn-secondary" onclick="goTo('s1')">&larr; Back</button>
+                <button class="btn" onclick="checkS2()">Continue &rarr;</button>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@ textarea:focus{outline:none;border-color:#2E7D32}
         <div class="card">
             <div class="progress-text"><span>Section 3 of 5</span><span>60%</span></div>
             <div class="progress"><div class="progress-bar" style="width:60%"></div></div>
-            <h2>✍️ 3. Writing</h2>
+            <h2>&#9997;&#65039; 3. Writing</h2>
             <div class="prompt-box">
                 <h4>Writing Task</h4>
                 <p>Write about <strong>your daily routine</strong> (6-8 sentences).</p>
@@ -169,9 +169,9 @@ textarea:focus{outline:none;border-color:#2E7D32}
             <div class="word-count">Words: <span id="wc">0</span></div>
             <div class="feedback hidden" id="wFeedback"></div>
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="goTo('s2')">← Back</button>
-                <button class="btn" id="wBtn" onclick="checkWriting()">Get Feedback →</button>
-                <button class="btn hidden" id="wNext" onclick="goTo('s4')">Continue →</button>
+                <button class="btn btn-secondary" onclick="goTo('s2')">&larr; Back</button>
+                <button class="btn" id="wBtn" onclick="checkWriting()">Get Feedback &rarr;</button>
+                <button class="btn hidden" id="wNext" onclick="goTo('s4')">Continue &rarr;</button>
             </div>
         </div>
     </div>
@@ -179,22 +179,22 @@ textarea:focus{outline:none;border-color:#2E7D32}
         <div class="card">
             <div class="progress-text"><span>Section 4 of 5</span><span>80%</span></div>
             <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
-            <h2>🎤 4. Speaking - Role Play</h2>
+            <h2>&#127908; 4. Speaking - Role Play</h2>
             <div id="scenarioSelection">
                 <div class="prompt-box">
                     <h4>Choose a role-play scenario:</h4>
                     <p style="color:#666">You will have a conversation. Listen and respond!</p>
                 </div>
                 <div class="scenario-option" onclick="selectScenario(1)">
-                    <strong>🏠 Scenario 1: Tenant and Landlord</strong>
+                    <strong>&#127968; Scenario 1: Tenant and Landlord</strong>
                     <p style="color:#666;font-size:14px;margin-top:5px">You are the tenant. Something is broken in your apartment. Call your landlord.</p>
                 </div>
                 <div class="scenario-option" onclick="selectScenario(2)">
-                    <strong>🏥 Scenario 2: Doctor and Patient</strong>
+                    <strong>&#127973; Scenario 2: Doctor and Patient</strong>
                     <p style="color:#666;font-size:14px;margin-top:5px">You are the patient. You don't feel well. Talk to the doctor.</p>
                 </div>
                 <div class="scenario-option" onclick="selectScenario(3)">
-                    <strong>✈️ Scenario 3: Friends Sharing a Vacation</strong>
+                    <strong>&#9992;&#65039; Scenario 3: Friends Sharing a Vacation</strong>
                     <p style="color:#666;font-size:14px;margin-top:5px">You are talking to a friend about a vacation you took.</p>
                 </div>
             </div>
@@ -211,8 +211,8 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
             <div class="feedback hidden" id="sFeedback"></div>
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="goTo('s3')">← Back</button>
-                <button class="btn" id="sBtn" onclick="finishSpeaking()" style="display:none">Continue →</button>
+                <button class="btn btn-secondary" onclick="goTo('s3')">&larr; Back</button>
+                <button class="btn" id="sBtn" onclick="finishSpeaking()" style="display:none">Continue &rarr;</button>
             </div>
         </div>
     </div>
@@ -220,17 +220,17 @@ textarea:focus{outline:none;border-color:#2E7D32}
         <div class="card">
             <div class="progress-text"><span>Section 5 of 5</span><span>100%</span></div>
             <div class="progress"><div class="progress-bar" style="width:100%"></div></div>
-            <h2>📚 5. Grammar Quiz</h2>
+            <h2>&#128218; 5. Grammar Quiz</h2>
             <div id="grammarQuestions"></div>
             <div class="nav-buttons">
-                <button class="btn btn-secondary" onclick="goTo('s4')">← Back</button>
-                <button class="btn btn-orange" onclick="submitFinal()">Submit Final Review ✓</button>
+                <button class="btn btn-secondary" onclick="goTo('s4')">&larr; Back</button>
+                <button class="btn btn-orange" onclick="submitFinal()">Submit Final Review &check;</button>
             </div>
         </div>
     </div>
     <div class="section" id="results">
         <div class="score-card">
-            <p style="opacity:.8">🎉 Congratulations! A2 Course Complete! 🎉</p>
+            <p style="opacity:.8">&#127881; Congratulations! A2 Course Complete! &#127881;</p>
             <div class="score-big" id="finalPct">0%</div>
             <p id="studentDisplay"></p>
             <div class="scores">
@@ -247,14 +247,14 @@ textarea:focus{outline:none;border-color:#2E7D32}
             </div>
             <div style="margin-top:25px">
                 <div class="not-submitted" id="notSubmittedWarning">
-                    <h3>⚠️ NOT YET SUBMITTED</h3>
+                    <h3>&#9888;&#65039; NOT YET SUBMITTED</h3>
                     <p>Click the button below to submit your results to your teacher</p>
                 </div>
                 <div class="submitted-success" id="submittedSuccess">
-                    <h3>✓ Submitted Successfully!</h3>
+                    <h3>&check; Submitted Successfully!</h3>
                     <p>Your teacher will receive your results</p>
                 </div>
-                <button class="btn btn-orange" id="submitBtn" onclick="submitToTeacher()" style="margin-top:15px;font-size:20px;padding:20px">📤 Submit to Teacher</button>
+                <button class="btn btn-orange" id="submitBtn" onclick="submitToTeacher()" style="margin-top:15px;font-size:20px;padding:20px">&#128228; Submit to Teacher</button>
             </div>
         </div>
     </div>
@@ -270,7 +270,7 @@ let isRecording=false;
 let recognition=null;
 const scenarios={
     1:{
-        title:'🏠 Tenant and Landlord',
+        title:'\U0001F3E0 Tenant and Landlord',
         aiRole:'Landlord',
         userRole:'Tenant',
         exchanges:[
@@ -281,7 +281,7 @@ const scenarios={
         ]
     },
     2:{
-        title:'🏥 Doctor and Patient',
+        title:'\U0001F3E5 Doctor and Patient',
         aiRole:'Doctor',
         userRole:'Patient',
         exchanges:[
@@ -292,7 +292,7 @@ const scenarios={
         ]
     },
     3:{
-        title:'✈️ Friends Sharing a Vacation',
+        title:'\u2708\uFE0F Friends Sharing a Vacation',
         aiRole:'Friend',
         userRole:'You',
         exchanges:[
@@ -323,14 +323,14 @@ const grammarQBank=[
     {q:"I _____ to New York last month.",opts:["go","went","going"],correct:1}
 ];
 const vocabMatchBank=[
-    {term:"freezing",def:"The weather is very cold. It's"},
-    {term:"uncle",def:"My mother's brother is my"},
-    {term:"doctor",def:"I have a bad cough. I should see a"},
-    {term:"rent",def:"I pay to my landlord every month."},
-    {term:"boss",def:"My told me to finish the report."},
-    {term:"went",def:"Last summer, I to the beach."},
-    {term:"full-time",def:"She works 9-5. She has a job."},
-    {term:"headache",def:"I have a My head hurts."}
+    {term:"freezing",def:"The weather is very cold. It's _____."},
+    {term:"uncle",def:"My mother's brother is my _____."},
+    {term:"doctor",def:"I have a bad cough. I should see a _____."},
+    {term:"rent",def:"I pay _____ to my landlord every month."},
+    {term:"boss",def:"My _____ told me to finish the report."},
+    {term:"went",def:"Last summer, I _____ to the beach."},
+    {term:"full-time",def:"She works 9-5. She has a _____ job."},
+    {term:"headache",def:"I have a _____. My head hurts."}
 ];
 let vocabPairs=[],vocabSelectedTerm=null,vocabMatched=0,vocabTotal=6;
 function shuffle(arr){
@@ -481,10 +481,10 @@ function checkWriting(){
     let feedbackHTML='<h4>Feedback</h4>';
     feedbackHTML+='<p>Word count: '+wc+'</p>';
     feedbackHTML+='<ul style="margin:8px 0;padding-left:20px;font-size:14px">';
-    feedbackHTML+='<li>'+(hasRoutine?'✅':'❌')+' Daily routine activities</li>';
-    feedbackHTML+='<li>'+(hasFrequency?'✅':'❌')+' Frequency words (usually, always, every day...)</li>';
-    feedbackHTML+='<li>'+(hasTime?'✅':'❌')+' Time references (7 AM, morning, evening...)</li>';
-    feedbackHTML+='<li>'+(hasConnector?'✅':'❌')+' Sequence words (then, after, first...)</li>';
+    feedbackHTML+='<li>'+(hasRoutine?'\u2705':'\u274C')+' Daily routine activities</li>';
+    feedbackHTML+='<li>'+(hasFrequency?'\u2705':'\u274C')+' Frequency words (usually, always, every day...)</li>';
+    feedbackHTML+='<li>'+(hasTime?'\u2705':'\u274C')+' Time references (7 AM, morning, evening...)</li>';
+    feedbackHTML+='<li>'+(hasConnector?'\u2705':'\u274C')+' Sequence words (then, after, first...)</li>';
     feedbackHTML+='</ul>';
     if(errorCount>0){
         feedbackHTML+='<p style="color:#ef4444"><strong>Grammar errors found: '+errorCount+'</strong></p>';
@@ -503,7 +503,7 @@ function selectScenario(num){
     });
     document.getElementById('scenarioSelection').style.display='none';
     document.getElementById('rolePlayArea').style.display='block';
-    document.getElementById('scenarioTitle').textContent=scenario.title+' — You are the '+scenario.userRole;
+    document.getElementById('scenarioTitle').textContent=scenario.title+' \u2014 You are the '+scenario.userRole;
     transcript=[];
     currentExchange=0;
     document.getElementById('chatContainer').innerHTML='';
@@ -629,7 +629,7 @@ function handleUserResponse(userText){
 }
 function endConversation(){
     document.getElementById('micBtn').disabled=true;
-    document.getElementById('statusText').textContent='✓ Conversation complete!';
+    document.getElementById('statusText').textContent='\u2713 Conversation complete!';
     const scenario=scenarios[selectedScenario];
     const studentTurns=Math.max(1,scenario.exchanges.length-1);
     const completed=Math.min(currentExchange,studentTurns);
@@ -669,7 +669,7 @@ function submitFinal(){
     let cefrLevel='A2';
     let cefrMsg='';
     if(pct>=85){
-        cefrLevel='A2+ → B1';
+        cefrLevel='A2+ \u2192 B1';
         cefrMsg='Excellent! You are ready to move to B1 Intermediate level!';
     }else if(pct>=70){
         cefrLevel='A2';
@@ -698,7 +698,6 @@ function submitToTeacher(){
     const clsVal=document.getElementById('studentClass')?document.getElementById('studentClass').value:'';
     const formData=new FormData();
     formData.append('entry.1066076854',studentName);
-    // entry.351193357 = Session, entry.514421492 = Class (matches A2 Class 10 mapping)
     formData.append('entry.351193357',SESSION);
     formData.append('entry.2003686479',scores.l+'/3');
     formData.append('entry.985159923',scores.v+'/6');
@@ -711,14 +710,14 @@ function submitToTeacher(){
     formData.append('entry.514421492',clsVal);
     formData.append('entry.1451249480',document.getElementById('teacherName').value);
     function showSuccess(){
-        if(btn){btn.textContent='Submitted ✓';btn.style.background='#22c55e';btn.disabled=true;btn.style.display='none';}
+        if(btn){btn.textContent='Submitted \u2713';btn.style.background='#22c55e';btn.disabled=true;btn.style.display='none';}
         if(warnEl)warnEl.style.display='none';
         if(successEl)successEl.style.display='block';
     }
     function showFailure(){
         submitted=false;
         if(btn){btn.disabled=false;btn.textContent='Failed - Tap to Retry';btn.style.background='#ef4444';}
-        if(warnEl){warnEl.style.display='block';warnEl.textContent='⚠️ Submission failed. Check your internet and tap Retry.';}
+        if(warnEl){warnEl.style.display='block';warnEl.textContent='\u26A0\uFE0F Submission failed. Check your internet and tap Retry.';}
     }
     let done=false;
     const timeoutId=setTimeout(function(){if(!done){done=true;showSuccess();}},6000);
